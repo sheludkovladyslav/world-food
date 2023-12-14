@@ -1,0 +1,161 @@
+.main {
+  padding-top: 150px;
+  padding-bottom: 100px;
+  background-color: $backgroundSecondary;
+}
+
+.meals {
+  &__title {
+    @include text($colorTitles, 40px, 400);
+    font-family: $titles;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__cards {
+    padding-inline: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+
+.main__meals {
+  padding-bottom: 60px;
+}
+
+.meal {
+  display: flex;
+  flex-direction: column;
+  &__img {
+    border-radius: 10px;
+    margin-bottom: 25px;
+  }
+
+  &__title {
+    @include text($colorTextPrimary, 19px, 400);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  &__description {
+    @include text($colorTextPrimary, 15px, 400);
+    text-align: center;
+  }
+}
+
+.drinks {
+  &__title {
+    @include text($colorTitles, 40px, 400);
+    font-family: $titles;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  &__cards {
+    padding-inline: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+
+.drink {
+  display: flex;
+  flex-direction: column;
+  &__img {
+    border-radius: 10px;
+    margin-bottom: 25px;
+  }
+
+  &__title {
+    @include text($colorTextPrimary, 19px, 400);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  &__description {
+    @include text($colorTextPrimary, 15px, 400);
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .meal {
+    flex-basis: calc((100% - 60px) / 2);
+  }
+
+  .meals__cards {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .drink {
+    flex-basis: calc((100% - 60px) / 2);
+  }
+
+  .drinks__cards {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .meals__title {
+    margin-bottom: 30px;
+  }
+
+  .drinks__title {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .meal {
+    flex-basis: calc((100% - 180px) / 3);
+  }
+
+  .meals__cards {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    row-gap: 70px;
+  }
+
+  .drink {
+    flex-basis: calc((100% - 180px) / 4);
+  }
+
+  .drinks__cards {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .meals__title {
+    margin-bottom: 30px;
+  }
+
+  .meal__title {
+    @include text($colorTextPrimary, 22px, 400);
+  }
+
+  .meal__description {
+    @include text($colorTextPrimary, 17px, 400);
+  }
+
+  .drinks__title {
+    margin-bottom: 40px;
+  }
+
+  .drink__title {
+    @include text($colorTextPrimary, 22px, 400);
+  }
+
+  .drink__description {
+    @include text($colorTextPrimary, 17px, 400);
+  }
+}

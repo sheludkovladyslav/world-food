@@ -1,0 +1,83 @@
+.nav__btn {
+  display: none;
+  
+}
+.no-scroll {
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .btn-menu {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    background: none;
+  }
+
+  .btn-menu__icon,
+  .btn-menu__icon::before,
+  .btn-menu__icon::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    background-color: $colorTextSecondary;
+    transition: transform 0.3s ease-in 0.3s;
+    transition: top 0.1s ease-in;
+  }
+
+  .btn-menu__icon {
+    top: calc(50% - 1px);
+  }
+
+  .btn-menu__icon::after {
+    top: 8px;
+  }
+
+  .btn-menu__icon::before {
+    top: -8px;
+  }
+  .nav__list {
+    display: none;
+  }
+
+  .menu-open .btn-menu__icon::before,
+  .menu-open .btn-menu__icon::after {
+    top: 0;
+  }
+
+  .menu-open .btn-menu__icon {
+    transform: rotate(-45deg);
+  }
+
+  .menu-open .btn-menu__icon::after {
+    transform: rotate(90deg);
+  }
+
+  .nav__list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    height: 100%;
+    background-color: $menuBackground;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 40px;
+    align-items: flex-start;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in;
+    padding-inline: 50px;
+  }
+
+  .menu-open .nav__list {
+    transform: translateX(0);
+  }
+
+  .nav__link {
+    @include text($colorTextSecondary, 28px, 400)
+  }
+}

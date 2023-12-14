@@ -1,0 +1,7 @@
+.nav__link:hover {
+    color: $colorTextActive;
+}
+
+.nav__link:hover::before {
+    background-color: $colorTextSecondary;
+}

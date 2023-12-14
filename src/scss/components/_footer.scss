@@ -1,0 +1,117 @@
+.footer {
+  padding: 15px 30px;
+  &__icon {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+  }
+
+  &__link {
+    display: flex;
+    gap: 10px;
+    @include text($colorTextPrimary, 15px, 400);
+    @include animation(color);
+    &:hover {
+      color: $colorTextActive;
+    }
+  }
+
+  &__logo {
+    width: 250px;
+  }
+
+  &__our-contacts {
+    margin-bottom: 20px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.footer__link:hover .footer__icon {
+  fill: $colorTextActive;
+  @include animation(fill);
+}
+
+.our-contacts {
+  &__text {
+    @include text($colorTextPrimary, 20px, 400);
+    margin-bottom: 15px;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+}
+
+.links__item {
+  width: 100%;
+  text-align: center;
+  align-items: center;
+}
+
+.pages {
+  &__title {
+    @include text($colorTextPrimary, 20px, 400);
+    margin-bottom: 15px;
+  }
+
+  &__link {
+    @include animation(color);
+    @include text($colorTextPrimary, 15px, 400);
+  }
+  &__link:hover {
+    color: $colorTextActive;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+    text-align: left;
+  }
+
+  .footer__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+    text-align: left;
+  
+  }
+
+  .footer__container {
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .footer__wrapper {
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 200px;
+    width: 1300px;
+  }
+
+  .footer {
+    margin-top: 30px;
+  }
+}

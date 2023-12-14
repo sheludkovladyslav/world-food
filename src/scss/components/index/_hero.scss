@@ -1,0 +1,88 @@
+.hero {
+  background: hsla(49, 93%, 63%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(49, 93%, 63%, 1) 0%,
+    hsla(8, 82%, 53%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(49, 93%, 63%, 1) 0%,
+    hsla(8, 82%, 53%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(49, 93%, 63%, 1) 0%,
+    hsla(8, 82%, 53%, 1) 100%
+  );
+  &__list {
+    display: inline-flex;
+    flex-direction: column;
+    padding-inline: 20px;
+  }
+
+  &__text {
+    @include text($colorTextSecondary, 35px, 700);
+    background-color: $backgroundPrimary;
+    padding: 10px 3px;
+    text-transform: uppercase;
+    display: inline-block;
+  }
+
+  &__logo {
+    width: 80vw;
+  }
+
+  &__photo {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.hero__container {
+  width: 100vw;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding-top: 100px;
+  height: 80vh;
+}
+
+.header__hero {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 531px) {
+  .hero__container {
+    height: 100%;
+    padding-top: 170px;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero__container {
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 50px;
+  }
+
+  .hero__logo {
+    width: 50vw;
+  }
+}
+
+@media (min-width: 1400px) {
+  .hero__logo {
+    width: 30vw;
+  }
+
+  .hero__container {
+    width: 1300px;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+}

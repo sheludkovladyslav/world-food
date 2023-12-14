@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&family=Merriweather:wght@400;700&family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/css/styles.css" />
+  </head>
+  <body>
+    <header class="header" id="main-header">
+      <div class="container header__container">
+        <a href="index.html">
+          <img src="/src/img/header/logo.webp" class="header__logo" alt="" />
+        </a>
+        <nav class="header__nav nav" data-menu>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link " href="menu.html#meals">Our Meals</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="menu.html#drinks">Our Drinks</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="about-us.html">About Us</a>
+            </li>
+            <li class="nav__item">
+              <a href="nutrients.html" class="nav__link">Nutrients</a>
+            </li>
+          </ul>
+          <button class="nav__btn btn-menu" data-open_btn>
+            <span class="btn-menu__icon"></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <div class="hero header__hero">
+        <div class="hero__container container">
+          <ul class="hero__list">
+            <li><p class="hero__text">Fresh soup.</p></li>
+            <li><p class="hero__text">Everyday.</p></li>
+            <li><p class="hero__text">Around the world.</p></li>
+          </ul>
+          <div class="hero__photo">
+            <img
+              src="/src/img/header/logo.webp"
+              alt="Logo"
+              class="hero__logo"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="menu main__menu">
+        <h2 class="menu__title">our menu</h2>
+        <div class="menu__photo-container">
+          <img src="/src/img/main/menu.jpeg" alt="Menu" class="menu__photo" />
+        </div>
+      </div>
+
+      <div class="food-truck main__food-truck">
+        <h2 class="food-truck__title">Our Food Truck</h2>
+        <ul class="food-truck__list">
+          <li class="list__item">
+            <img
+              class="food-truck__photo"
+              src="/src/img/main/foodtruck/front-left.jpeg"
+              alt="Front left of Food Truck"
+            />
+          </li>
+          <li class="list__item">
+            <img
+              class="food-truck__photo"
+              src="/src/img/main/foodtruck/front-right.jpeg"
+              alt="Front right of Food Truck"
+            />
+          </li>
+          <li class="list__item">
+            <img
+              class="food-truck__photo"
+              src="/src/img/main/foodtruck/back-left.jpeg"
+              alt="Back left of Food Truck"
+            />
+          </li>
+          <li class="list__item">
+            <img
+              class="food-truck__photo"
+              src="/src/img/main/foodtruck/back-right.jpeg"
+              alt="Back right of Food Truck"
+            />
+          </li>
+        </ul>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__wrapper container">
+        <img
+          src="/src/img/header/logo.webp"
+          class="footer__logo"
+          alt=""
+          class="footer__logo"
+        />
+        <div class="footer__container">
+          <div class="our-contacts footer__our-contacts">
+            <p class="our-contacts__text">Our Contacts:</p>
+            <ul class="our-contacts__links">
+              <li class="links__item">
+                <a href="mailto:wourldsoup123@gmail.com" class="footer__link">
+                  <svg class="footer__icon">
+                    <use href="/src/img/footer/icons.svg#icon-mail"></use>
+                  </svg>
+                  worldsoup123@gmail.com</a
+                >
+              </li>
+              <li class="links__item">
+                <a href="tel:14375555555" class="footer__link"
+                  ><svg class="footer__icon">
+                    <use href="/src/img/footer/icons.svg#icon-phone"></use>
+                  </svg>
+                  +1 (437) 555-5555</a
+                >
+              </li>
+              <li class="links__item">
+                <a href="#" class="footer__link">
+                  <svg class="footer__icon">
+                    <use href="/src/img/footer/icons.svg#icon-x"></use>
+                  </svg>
+                  @worldsoupofficial
+                </a>
+              </li>
+              <li class="links__item">
+                <a href="#" class="footer__link footer__link--twitter"
+                  ><svg class="footer__icon">
+                    <use href="/src/img/footer/icons.svg#icon-instagram"></use>
+                  </svg>
+                  @worldsoupfoodtruck
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pages">
+            <h2 class="pages__title">Pages</h2>
+            <ul class="pages__list">
+              <li class="pages__item">
+                <a href="#" class="pages__link">Our Meals</a>
+              </li>
+              <li class="pages__item">
+                <a href="#" class="pages__link">Our Drinks</a>
+              </li>
+              <li class="pages__item">
+                <a href="#" class="pages__link">Nutrients</a>
+              </li>
+              <li class="pages__item">
+                <a href="#" class="pages__link">Contacts</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/src/js/mobile-menu.js"></script>
+    <script src="/src/js/background.js"></script>
+  </body>
+</html>

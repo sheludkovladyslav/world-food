@@ -1,0 +1,110 @@
+.header {
+  min-height: 100px;
+  padding: 5px 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  transition: background-color 0.5s ease, opacity 0.5s ease;
+
+  &__logo {
+    width: 100px;
+    height: 100px;
+  }
+}
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav {
+  display: flex;
+  align-items: center;
+}
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header.scrolled {
+  background-color: #212121;
+}
+
+.nav__link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: $colorTextSecondary;
+}
+
+.nav__link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: $backgroundSecondary;
+  @include animation(width);
+}
+
+.nav__link:hover::before {
+  width: 100%;
+}
+
+.underline-effect:hover::before {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .nav__link {
+    @include text($colorTextSecondary, 18px, 400);
+    @include animation(color);
+    &:hover {
+      color: $colorTextActive;
+    }
+  }
+
+  .nav__list {
+    gap: 30px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .header__container {
+    width: 1300px;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  .header {
+    justify-content: space-between;
+  }
+
+  .nav__list {
+    gap: 100px;
+  }
+
+  .header__logo {
+    width: 140px;
+    height: 140px;
+  }
+
+  .nav__link {
+    @include text($colorTextSecondary, 20px, 400);
+  }
+}
+
+.nav__link--opened {
+  color: $colorTextActive;
+}
+
+.nav__link--opened:hover  {
+  color: $colorTextSecondary;
+}
+
+.nav__link--opened:hover::before {
+  background-color: $colorTextActive;
+}

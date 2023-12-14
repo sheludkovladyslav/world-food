@@ -1,0 +1,30 @@
+.main {
+  padding-top: 120px;
+  padding-bottom: 50px;
+  background-color: $backgroundColorTertiary;
+}
+
+.about-us__logo {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.about-us {
+  padding: 20px 30px;
+  &__title {
+    @include text($colorTitles, 40px, 400);
+    font-family: $titles;
+    text-align: center;
+  }
+  &__text {
+    @include text($colorTextPrimary, 15px, 400);
+    text-align: center;
+  }
+}
+
+@media (min-width: 1400px) {
+  .about-us__text {
+    @include text($colorTextPrimary, 24px, 400);
+    text-align: center;
+  }
+}

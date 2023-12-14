@@ -1,0 +1,28 @@
+html {
+    scroll-behavior:smooth ;
+    scroll-padding-top: 160px;
+}
+
+body {
+  color: $colorTextPrimary;
+  font-family: $textFontPrimary;
+  font-size: 14px;
+  font-weight: 400;
+  overflow: scroll;
+}
+
+.container {
+  min-width: 320px;
+}
+
+img {
+  width: 100%;
+  display: block;
+  max-width: 100%;
+}
+
+@media (min-width: 350px) {
+  body {
+    overflow-x: hidden;
+  }
+}

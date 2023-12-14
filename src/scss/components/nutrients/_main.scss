@@ -1,0 +1,67 @@
+.main {
+  background-color: $backgroundPrimary;
+}
+
+.nutrients {
+  padding: 150px 20px;
+}
+
+.nutrients__cards {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  row-gap: 70px;
+  flex-wrap: wrap;
+}
+
+.nutrients__title {
+  @include text($colorTextSecondary, 22px, 400);
+  font-family: $titles;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.meal {
+  @include text($colorTextSecondary, 19px, 400);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.meal__nutrient {
+  @include text($colorTextSecondary, 15px, 700);
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.meal__quantity {
+  @include text($colorTextSecondary, 15px, 700);
+  text-align: center;
+  margin-bottom: 7px;
+}
+
+.nutrient {
+  @include text($colorTextSecondary, 15px, 400);
+  text-align: center;
+}
+
+.nutrient__card {
+  flex-basis: calc((100% - 100px) / 2);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .nutrient__card {
+    flex-basis: calc((100% - 100px) / 3);
+  }
+}
+
+@media (min-width: 1400px) {
+    .nutrient__card {
+      flex-basis: calc((100% - 150px) / 4);
+    }
+  }
