@@ -286,7 +286,7 @@ img {
   flex-direction: column;
   gap: 50px;
   padding-top: 100px;
-  height: 80vh;
+  height: 100vh;
 }
 
 .header__hero {
